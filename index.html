@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gadget Classifier</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.0.0"></script>
+</head>
+<body>
+
+<h1>📱 Gadget Classifier AI</h1>
+
+<div id="container">
+
+    <div id="imageWrapper">
+        <video id="video" autoplay playsinline class="hidden"></video>
+        <canvas id="canvas" class="hidden"></canvas>
+        <img id="preview" src="assets/placeholder.jpg" alt="Image preview" />
+        <div id="loader" class="hidden"></div>
+    </div>
+
+    <button class="btn" onclick="openFile()">📁 Choose from Gallery</button>
+    <button class="btn camera" onclick="startCamera()">📸 Open Camera</button>
+    <button class="btn capture hidden" onclick="takePhoto()">📷 Capture Photo</button>
+
+    <input type="file" id="fileInput" accept="image/*" hidden />
+
+    <h2 id="resultText">Upload or capture an image...</h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
